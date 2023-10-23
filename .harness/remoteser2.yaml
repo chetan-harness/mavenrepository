@@ -3,3 +3,17 @@ service:
   identifier: remoteser2
   orgIdentifier: Ng_Pipelines_K8s_Organisations
   projectIdentifier: AzureArtifactOuXUwMGQJm
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: org.DockerConnectorForAutomationTest
+                imagePath: <+input>
+                tag: <+input>
+                digest: ""
+              identifier: dswd
+              type: DockerRegistry
+    type: Kubernetes
