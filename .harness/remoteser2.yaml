@@ -1,0 +1,5 @@
+service:
+  name: remoteser2
+  identifier: remoteser2
+  orgIdentifier: Ng_Pipelines_K8s_Organisations
+  projectIdentifier: AzureArtifactOuXUwMGQJm
