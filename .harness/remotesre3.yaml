@@ -3,3 +3,17 @@ service:
   identifier: remotesre3
   orgIdentifier: Ng_Pipelines_K8s_Organisations
   projectIdentifier: AzureArtifactOuXUwMGQJm
+  serviceDefinition:
+    spec:
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: org.DockerConnectorForAutomationTest
+                imagePath: library/nginx
+                tag: stable-alpine-slim
+                digest: sha256:2dd6fda42712ea12e1654f5cf551144fd3f30269276f36ed1c9c2c19a18f7ec7
+              identifier: qasd
+              type: DockerRegistry
+    type: Kubernetes
