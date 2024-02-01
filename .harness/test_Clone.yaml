@@ -1,0 +1,63 @@
+---
+pipeline:
+  projectIdentifier: "Test_Project_default_settings"
+  orgIdentifier: "default"
+  tags: {}
+  stages:
+  - stage:
+      name: "test"
+      identifier: "test"
+      description: ""
+      type: "Custom"
+      spec:
+        execution:
+          steps:
+          - step:
+              type: "ShellScript"
+              name: "ShellScript_1"
+              identifier: "ShellScript_1"
+              spec:
+                shell: "Bash"
+                executionTarget: {}
+                source:
+                  type: "Inline"
+                  spec:
+                    script: "echo \"test\""
+                environmentVariables: []
+                outputVariables: []
+              timeout: "10m"
+        environment:
+          environmentRef: "<+input>"
+          deployToAll: false
+          environmentInputs: "<+input>"
+          infrastructureDefinitions: "<+input>"
+      tags: {}
+  notificationRules:
+  - name: "test"
+    identifier: "test"
+    pipelineEvents:
+    - type: "AllEvents"
+    - type: "PipelineStart"
+    - type: "PipelineEnd"
+    - type: "PipelineSuccess"
+    - type: "PipelineFailed"
+    - type: "StageFailed"
+    - type: "StageSuccess"
+    - type: "StageStart"
+    - type: "StepFailed"
+    notificationMethod:
+      type: "Email"
+      spec:
+        userGroups: []
+        recipients:
+        - "test@gmail.com"
+    enabled: true
+  flowControl:
+    barriers:
+    - name: "test"
+      identifier: "test"
+  timeout: "10m"
+  delegateSelectors:
+  - "aks-auth-plugin-iam-role"
+  identifier: "test_Clone"
+  name: "test - Clone"
