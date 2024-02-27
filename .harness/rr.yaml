@@ -1,0 +1,7 @@
+environment:
+  name: rr
+  identifier: rr
+  accountId: rXUXvbFqRr2XwcjBu3Oq-Q
+  orgIdentifier: default
+  projectIdentifier: ar7test
+  type: Production
