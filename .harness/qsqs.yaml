@@ -1,0 +1,5 @@
+service:
+  name: qsqs
+  identifier: qsqs
+  tags:
+    ss: ""
