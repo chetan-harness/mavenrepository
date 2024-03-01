@@ -1,0 +1,5 @@
+service:
+  name: qq
+  identifier: qq
+  tags:
+    ss: ""
