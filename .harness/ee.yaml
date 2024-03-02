@@ -1,0 +1,28 @@
+infrastructureDefinition:
+  name: ee
+  identifier: ee
+  environmentRef: qa
+  deploymentType: CustomDeployment
+  type: CustomDeployment
+  spec:
+    customDeploymentRef:
+      templateRef: account.CDPAutomationTemplaterjBvbRtwdt
+      versionLabel: V1
+    variables:
+      - name: git_connector
+        type: Secret
+        value: ""
+        description: ""
+      - name: gitSecret
+        type: Connector
+        value: ""
+        description: ""
+      - name: Name
+        type: String
+        value: cd-test
+        description: ""
+      - name: instanceCount
+        type: Number
+        value: ""
+        description: ""
+  allowSimultaneousDeployments: true
