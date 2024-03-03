@@ -1,0 +1,5 @@
+environment:
+  name: remote_env_ar7_sun
+  identifier: remote_env_ar7_sun
+  accountId: OgiB4-xETamKNVAz-wQRjw
+  type: Production
