@@ -1,0 +1,6 @@
+environment:
+  name: latest_Org_ar7
+  identifier: latest_Org_ar7
+  accountId: OgiB4-xETamKNVAz-wQRjw
+  orgIdentifier: Pipelines_NonK8s_Org_NG
+  type: Production
