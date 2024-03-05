@@ -1,0 +1,42 @@
+template:
+  name: multi_svc_infra_bug
+  identifier: multi_svc_infra_bug
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Deployment
+    spec:
+      deploymentType: Kubernetes
+      environment:
+        environmentRef: test_env_ar7_mon
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: infra_remote_ar7
+      service:
+        serviceRef: remote_svc_ar7
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo "hi"
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+        rollbackSteps: []
+    failureStrategies:
+      - onFailure:
+          errors:
+            - AllErrors
+          action:
+            type: MarkAsFailure
