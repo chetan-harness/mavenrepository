@@ -1,0 +1,45 @@
+pipeline:
+  name: remote_pipe_infra_multi_svc_bug
+  identifier: remote_pipe_infra_multi_svc_bug
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Deployment
+        spec:
+          deploymentType: Kubernetes
+          service:
+            serviceRef: remote_svc_ar7
+          environment:
+            environmentRef: test_env_ar7_mon
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: infra_remote_ar7
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "hi"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+            rollbackSteps: []
+        tags: {}
+        failureStrategies:
+          - onFailure:
+              errors:
+                - AllErrors
+              action:
+                type: MarkAsFailure
