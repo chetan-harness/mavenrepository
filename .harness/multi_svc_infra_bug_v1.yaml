@@ -10,13 +10,6 @@ template:
     type: Deployment
     spec:
       deploymentType: Kubernetes
-      environment:
-        environmentRef: test_env_ar7_mon
-        deployToAll: false
-        infrastructureDefinitions:
-          - identifier: infra_remote_ar7
-      service:
-        serviceRef: remote_svc_ar7
       execution:
         steps:
           - step:
@@ -34,6 +27,24 @@ template:
                 outputVariables: []
               timeout: 10m
         rollbackSteps: []
+      services:
+        values:
+          - serviceRef: remote_svc_ar7
+          - serviceRef: remote_svc_ar7_bug_2
+        metadata:
+          parallel: true
+      environments:
+        metadata:
+          parallel: true
+        values:
+          - environmentRef: test_env_ar7_mon
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: infra_remote_ar7
+          - environmentRef: test_env_ar7_bug_2
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: remote_infra_bug_2
     failureStrategies:
       - onFailure:
           errors:
