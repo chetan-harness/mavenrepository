@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: remote_infra_bug_2
+  identifier: remote_infra_bug_2
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_AR7
+  environmentRef: test_env_ar7_bug_2
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.KubernetesAccLvlConnectorForAutomationTest
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: true
