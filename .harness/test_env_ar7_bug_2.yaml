@@ -1,0 +1,7 @@
+environment:
+  name: test_env_ar7_bug_2
+  identifier: test_env_ar7_bug_2
+  accountId: OgiB4-xETamKNVAz-wQRjw
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_AR7
+  type: Production
