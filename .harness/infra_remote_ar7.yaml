@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: infra_remote_ar7
+  identifier: infra_remote_ar7
+  orgIdentifier: default
+  projectIdentifier: DoNotDelete_AR7
+  environmentRef: test_env_ar7_mon
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: org.KubernetesEKSConnectorForAutomationTest
+    namespace: default
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: true
