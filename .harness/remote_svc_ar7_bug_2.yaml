@@ -3,3 +3,8 @@ service:
   identifier: remote_svc_ar7_bug_2
   orgIdentifier: default
   projectIdentifier: DoNotDelete_AR7
+  serviceDefinition:
+    spec:
+      release:
+        name: release-<+INFRA_KEY_SHORT_ID>
+    type: Kubernetes
