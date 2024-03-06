@@ -38,13 +38,11 @@ template:
           parallel: true
         values:
           - environmentRef: test_env_ar7_bug_2
-            deployToAll: false
-            infrastructureDefinitions:
-              - identifier: remote_infra_bug_2
+            deployToAll: true
+            infrastructureDefinitions: <+input>
           - environmentRef: test_env_ar7_bug
-            deployToAll: false
-            infrastructureDefinitions:
-              - identifier: infra
+            deployToAll: true
+            infrastructureDefinitions: <+input>
     failureStrategies:
       - onFailure:
           errors:
