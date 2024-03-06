@@ -1,0 +1,22 @@
+pipeline:
+  name: test_call
+  identifier: test_call
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: multi_svc_infra_bug
+          versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              environments:
+                values:
+                  - environmentRef: test_env_ar7_bug
+                    infrastructureDefinitions:
+                      - identifier: infra
