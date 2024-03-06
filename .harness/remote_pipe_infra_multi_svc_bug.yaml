@@ -12,3 +12,10 @@ pipeline:
         template:
           templateRef: multi_svc_infra_bug
           versionLabel: v1
+          templateInputs:
+            type: Deployment
+            spec:
+              environments:
+                values:
+                  - infrastructureDefinitions: <+input>
+                    environmentRef: test_env_ar7_bug
