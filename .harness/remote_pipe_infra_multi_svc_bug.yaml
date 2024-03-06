@@ -17,5 +17,6 @@ pipeline:
             spec:
               environments:
                 values:
-                  - infrastructureDefinitions: <+input>
-                    environmentRef: test_env_ar7_bug
+                  - environmentRef: test_env_ar7_bug
+                    infrastructureDefinitions:
+                      - identifier: infra
