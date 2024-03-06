@@ -42,8 +42,9 @@ template:
             infrastructureDefinitions:
               - identifier: remote_infra_bug_2
           - environmentRef: test_env_ar7_bug
-            deployToAll: true
-            infrastructureDefinitions: <+input>
+            deployToAll: false
+            infrastructureDefinitions:
+              - identifier: infra
     failureStrategies:
       - onFailure:
           errors:
