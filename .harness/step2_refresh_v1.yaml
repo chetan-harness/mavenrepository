@@ -1,0 +1,21 @@
+template:
+  name: step2_refresh
+  identifier: step2_refresh
+  versionLabel: v1
+  type: Step
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo "step2"
+      environmentVariables: []
+      outputVariables: []
