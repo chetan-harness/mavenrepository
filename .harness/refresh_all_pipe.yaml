@@ -1,0 +1,21 @@
+pipeline:
+  name: refresh_all_pipe
+  identifier: refresh_all_pipe
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: stage1_refresh
+          versionLabel: v1
+    - stage:
+        name: s2
+        identifier: s2
+        tags: {}
+        template:
+          templateRef: stage2_refresh
+          versionLabel: v1
