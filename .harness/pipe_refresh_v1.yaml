@@ -15,6 +15,17 @@ template:
           template:
             templateRef: stage1_refresh
             versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
       - stage:
           name: s2
           identifier: s2
@@ -22,3 +33,14 @@ template:
           template:
             templateRef: stage2_refresh
             versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: step2
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            timeout: <+input>
