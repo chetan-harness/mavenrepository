@@ -1,0 +1,39 @@
+pipeline:
+  name: test
+  identifier: test
+  tags: {}
+  template:
+    templateRef: aavcz
+    versionLabel: v1
+    templateInputs:
+      stages:
+        - stage:
+            identifier: s1
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step1
+                          template:
+                            templateInputs:
+                              type: ShellScript
+                              timeout: <+input>
+        - stage:
+            identifier: s2
+            template:
+              templateInputs:
+                type: Custom
+                spec:
+                  execution:
+                    steps:
+                      - step:
+                          identifier: step2
+                          template:
+                            templateInputs:
+                              type: ShellScript
+                              timeout: <+input>
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
