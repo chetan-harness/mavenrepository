@@ -1,0 +1,24 @@
+template:
+  name: stage2_refresh
+  identifier: stage2_refresh
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: DoNotDelete_AR7
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      environment:
+        environmentRef: cfd
+        deployToAll: false
+        infrastructureDefinitions:
+          - identifier: cfdinf
+      execution:
+        steps:
+          - step:
+              name: step2
+              identifier: step2
+              template:
+                templateRef: step2_refresh
+                versionLabel: v1
