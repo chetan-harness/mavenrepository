@@ -22,3 +22,6 @@ template:
               template:
                 templateRef: step1_refresh
                 versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  timeout: <+input>
