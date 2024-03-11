@@ -44,3 +44,4 @@ template:
                           templateInputs:
                             type: ShellScript
                             timeout: <+input>
+    allowStageExecutions: true
