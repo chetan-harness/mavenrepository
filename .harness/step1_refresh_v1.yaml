@@ -15,7 +15,37 @@ template:
       source:
         type: Inline
         spec:
-          script: echo "step1"
+          script: |
+            echo "step1"
+            hdwbfhf
+            befe
+            rg
+            ret
+            grte
+            gert
+            gertrtg
+            ret
+            gertgert
+            gertertgh
+            rth
+            rg
+            hbfg
+            befedfgh
+            gertertghfg
+            hbfgfg
+            hdwbfhfgh
+            fg
+            hdwbfhfghdfg
+            hdwbfhfghdfggh
+            fgh
+            fdgd
+            hbfgfghdfh
+            fdgdh
+            dfgj
+            hbfgj
+            gj
+
+            hbfgjdj
       environmentVariables: []
       outputVariables: []
     timeout: 10m
