@@ -68,6 +68,12 @@ template:
         - name: i
           type: String
           value: i
+        - name: j
+          type: String
+          value: j
+        - name: k
+          type: String
+          value: k
       outputVariables: []
     timeout: 10m
     when:
