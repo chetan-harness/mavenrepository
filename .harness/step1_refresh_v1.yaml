@@ -40,7 +40,34 @@ template:
             echo "step1"
             echo "step1"
             echo "step1"
-      environmentVariables: []
+      environmentVariables:
+        - name: a
+          type: String
+          value: a
+        - name: b
+          type: String
+          value: ""
+        - name: c
+          type: String
+          value: c
+        - name: d
+          type: String
+          value: d
+        - name: e
+          type: String
+          value: e
+        - name: f
+          type: String
+          value: f
+        - name: g
+          type: String
+          value: g
+        - name: h
+          type: String
+          value: h
+        - name: i
+          type: String
+          value: i
       outputVariables: []
     timeout: 10m
     when:
