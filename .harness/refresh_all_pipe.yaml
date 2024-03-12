@@ -30,3 +30,14 @@ pipeline:
         template:
           templateRef: stage2_refresh
           versionLabel: v1
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: step2
+                      template:
+                        templateInputs:
+                          type: ShellScript
+                          timeout: <+input>
