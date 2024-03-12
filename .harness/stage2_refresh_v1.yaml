@@ -22,3 +22,4 @@ template:
               template:
                 templateRef: step2_refresh
                 versionLabel: v1
+    timeout: 10m
