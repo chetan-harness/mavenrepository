@@ -24,7 +24,7 @@ template:
                 versionLabel: v1
                 templateInputs:
                   type: ShellScript
-                  timeout: <+input>
+                  timeout: 10m
     timeout: 10m
     variables:
       - name: a
