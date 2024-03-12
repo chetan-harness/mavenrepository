@@ -23,3 +23,44 @@ template:
                 templateRef: step1_refresh
                 versionLabel: v1
     timeout: 10m
+    variables:
+      - name: a
+        type: String
+        description: ""
+        required: false
+        value: a
+      - name: b
+        type: String
+        description: ""
+        required: false
+        value: b
+      - name: c
+        type: String
+        description: ""
+        required: false
+        value: d
+      - name: d
+        type: String
+        description: ""
+        required: false
+        value: e
+      - name: e
+        type: String
+        description: ""
+        required: false
+        value: b
+      - name: f
+        type: String
+        description: ""
+        required: false
+        value: b
+      - name: g
+        type: String
+        description: ""
+        required: false
+        value: b
+      - name: h
+        type: String
+        description: ""
+        required: false
+        value: b
