@@ -25,3 +25,4 @@ template:
                 templateInputs:
                   type: ShellScript
                   timeout: <+input>
+    timeout: 10m
