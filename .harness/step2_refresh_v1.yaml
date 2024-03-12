@@ -18,4 +18,4 @@ template:
           script: echo "step2"
       environmentVariables: []
       outputVariables: []
-    timeout: 10m
+    timeout: <+input>
