@@ -75,7 +75,7 @@ template:
           type: String
           value: k
       outputVariables: []
-    timeout: 10m
+    timeout: <+input>
     when:
       stageStatus: Success
       condition: |-
