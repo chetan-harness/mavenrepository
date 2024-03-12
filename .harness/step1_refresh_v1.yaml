@@ -15,37 +15,31 @@ template:
       source:
         type: Inline
         spec:
-          script: |
+          script: |-
             echo "step1"
-            hdwbfhf
-            befe
-            rg
-            ret
-            grte
-            gert
-            gertrtg
-            ret
-            gertgert
-            gertertgh
-            rth
-            rg
-            hbfg
-            befedfgh
-            gertertghfg
-            hbfgfg
-            hdwbfhfgh
-            fg
-            hdwbfhfghdfg
-            hdwbfhfghdfggh
-            fgh
-            fdgd
-            hbfgfghdfh
-            fdgdh
-            dfgj
-            hbfgj
-            gj
-
-            hbfgjdj
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
+            echo "step1"
       environmentVariables: []
       outputVariables: []
     timeout: 10m
