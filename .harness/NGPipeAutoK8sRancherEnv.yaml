@@ -1,0 +1,5 @@
+environment:
+  identifier: NGPipeAutoK8sRancherEnv
+  tags: {}
+  name: NGPipeAutoK8sRancherEnv
+  type: PreProduction
