@@ -1,5 +1,5 @@
 environment:
   identifier: NGPipeAutoK8sRancherEnvtWN7MFcw6l
-  tags: {}
+  tags: {v1}
   name: NGPipeAutoK8sRancherEnvtWN7MFcw6l
   type: PreProduction
